@@ -19,9 +19,9 @@ CMD ["/sbin/my_init"]
 
 # Install MakeMKV
 
-RUN add-apt-repository "deb http://www.bunkus.org/ubuntu/trusty/ ./" && \
-	add-apt-repository "deb http://www.bunkus.org/ubuntu/trusty/ ./" && \
-	wget -q -O - https://www.bunkus.org/gpg-pub-moritzbunkus.txt | sudo apt-key add - && \
+RUN add-apt-repository "deb http://mkvtoolnix.download/ubuntu/yakkety/ ./" && \
+	add-apt-repository "deb http://mkvtoolnix.download/ubuntu/yakkety/ ./" && \
+	wget -q -O - https://mkvtoolnix.download/gpg-pub-moritzbunkus.txt | sudo apt-key add - && \
 	apt-get update && \
 	apt-get install -qy mkvtoolnix mkvtoolnix-gui
 
