@@ -1,5 +1,5 @@
 FROM hurricane/dockergui:xvnc
-MAINTAINER tobbenb <torbjornbrekke@gmail.com>
+MAINTAINER koreican <shanes429@gmail.com@gmail.com>
 # Set environment variables
 
 # User/Group Id gui app will be executed as
@@ -19,8 +19,8 @@ CMD ["/sbin/my_init"]
 
 # Install MakeMKV
 
-RUN add-apt-repository "deb http://mkvtoolnix.download/ubuntu/yakkety/ ./" && \
-	add-apt-repository "deb http://mkvtoolnix.download/ubuntu/yakkety/ ./" && \
+RUN add-apt-repository "deb http://mkvtoolnix.download/ubuntu/xenial/ ./" && \
+	add-apt-repository "deb http://mkvtoolnix.download/ubuntu/xenial/ ./" && \
 	wget -q -O - https://mkvtoolnix.download/gpg-pub-moritzbunkus.txt | sudo apt-key add - && \
 	apt-get update && \
 	apt-get install -qy mkvtoolnix mkvtoolnix-gui
